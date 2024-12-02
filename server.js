@@ -49,8 +49,11 @@ const lista = [
     }
 ];
 app.get("/bacheca", (req, res) => {
-    res.json(lista)
-})
+    res.json({
+        conteggio: lista.length,
+        post: lista
+    });
+});
 
 
 app.listen(PORT, () => {
